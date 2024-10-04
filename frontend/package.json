@@ -12,7 +12,9 @@
   "dependencies": {
     "framer-motion": "^12.0.0-alpha.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.3.0",
+    "react-icons-finder": "^0.7.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
