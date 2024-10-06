@@ -9,6 +9,16 @@ body {
   padding: 0;
   background: var(--background-color);
   padding-bottom: 100px;
+
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.noscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 :root {

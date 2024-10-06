@@ -9,15 +9,14 @@ const cardVariants = {
     onscreen: {
         y: 50,
         transition: {
-            type: "spring",
+            type: "spring", 
             bounce: 0.4,
             duration: 0.8,
         },
     },
 };
 
-const ProfileCard = ({ selfPhoto, hueA, hueB }) => {
-    const background = `linear-gradient(306deg, hsl(${hueA}, 100%, 50%), hsl(${hueB}, 100%, 50%))`;
+const ProfileCard = ({ selfPhoto }) => {
 
     return (
         <motion.div
@@ -29,12 +28,13 @@ const ProfileCard = ({ selfPhoto, hueA, hueB }) => {
 
             <div className="flex flex-col items-center">
                 <motion.div
-                    className="card object-cover w-[300px] h-[430px] rounded-[20px] shadow-lg flex items-center justify-center"
+                    className="card object-cover w-[300px] h-[430px] rounded-[20px] shadow-lg flex items-center justify-center z-0"
                     variants={cardVariants}
                 >
                     <img
+                        loading="lazy"
                         src={selfPhoto}
-                        alt="Profile"
+                        alt="profile picture of mohamed"
                         className="w-full h-full object-cover rounded-[20px]"
                     />
                 </motion.div>
