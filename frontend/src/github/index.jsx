@@ -1,7 +1,6 @@
 import { ApolloClient, InMemoryCache, createHttpLink, gql } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';   
 
-
   export async function getStaticProps() {
 
     const httpLink = createHttpLink({
@@ -9,11 +8,11 @@ import { setContext } from '@apollo/client/link/context';
       });
       
       const authLink = setContext((_, { headers }) => {
-
+     
         return {
           headers: {
             ...headers,
-            authorization: `Bearer ${import.meta.env.variable.GITHUB_ACCESS_TOKKEN}`,
+            authorization: `Bearer ${import.meta.env.VITE_GITHUB_ACCESS_TOKEN}`,
           }
         }
       });
@@ -48,10 +47,11 @@ import { setContext } from '@apollo/client/link/context';
 
       const {user} = data
       const pinnedItems = user.pinnedItems.edges.map(({node}) => node)
-      console.log(pinnedItems)
     return (
         {
-            props: {}
+            props: {
+              pinnedItems
+            }
         }
     )
   }
