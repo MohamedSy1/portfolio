@@ -17,7 +17,6 @@ const navItems = [
     {position: 25, title: "Blogs"}
 ]
 
-
 const SideNavBar = () => {
     const [isHovered, setIsHovered] = useState(false);
     const mouseY = useMotionValue(Infinity)

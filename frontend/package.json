@@ -10,14 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@types/node": "^22.7.4",
+    "dotenv": "^16.4.5",
     "framer-motion": "^12.0.0-alpha.0",
+    "graphql": "^16.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
     "react-icons-finder": "^0.7.7",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "requirejs": "^2.3.7"
   },
   "devDependencies": {
+    
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
