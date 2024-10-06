@@ -13,8 +13,8 @@ const numOfLines = 30;
 const navItems = [
     {position: 1, title: "About"},
     {position: 8, title: "Projects"},
-    {position: 20, title: "Technologies"},
-    {position: 25, title: "Blogs"}
+    {position: 20, title: "Exp."},
+    {position: 25, title: "contact"}
 ]
 
 const SideNavBar = () => {

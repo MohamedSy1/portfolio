@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { IoLogoLinkedin } from "react-icons/io";
-import { FaSquareGithub } from "react-icons/fa6";
+import ResumeButton from "../buttons/downloadCV";
 
 const cardVariants = {
     offscreen: {
@@ -41,18 +40,7 @@ const ProfileCard = ({ selfPhoto }) => {
 
                 <div className="bg-gray-400 w-[300px] h-[120px] mt-4 rounded-md flex items-center justify-center">
                     <ul className="flex gap-3">
-                        <motion.li
-                        whileTap=""
-                        >
-                            <a href="https://github.com/MohamedSy1?tab=repositories">
-                                <FaSquareGithub className="bg-gray-400 w-[5rem] h-[5rem] p-5"/>
-                            </a>
-                        </motion.li>
-                        <motion.li>
-                            <a href="https://www.linkedin.com/in/mohamed-s-179b20230/">
-                                <IoLogoLinkedin className=" bg-gray-400 w-[5rem] h-[5rem] p-5"/>
-                            </a>
-                        </motion.li>
+                        <li> <ResumeButton/> </li>
                     </ul>
                 </div>
             </div>

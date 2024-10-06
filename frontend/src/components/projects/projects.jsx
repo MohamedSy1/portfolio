@@ -1,4 +1,4 @@
-import { getStaticProps } from "../../github";
+import { getStaticProps } from "../github";
 import { useState, useEffect } from "react";
 
 const Projects = () => {

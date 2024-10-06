@@ -10,7 +10,7 @@ const ResumeButton = () => {
                     <span className="p-1">
                         <FiArrowRight />
                     </span>
-                    <span className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300 ">Download resume</span>
+                    <span className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300 ">My resume</span>
                 </button>
             </a>
         </div>
