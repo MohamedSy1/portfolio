@@ -30,6 +30,9 @@ export default {
           "warning-content": "#999999",
           "error-content": "#999999"
       },
+      screens: {
+        '1380': '1380px',
+      },
     },
   },
   plugins: [],

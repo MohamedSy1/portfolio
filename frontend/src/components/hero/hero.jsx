@@ -6,19 +6,17 @@ import ProfileCard from "../cards/profileCard.jsx"
 const Hero = () => {
 
     return (
-        <section className="grid md:grid-cols-2 md:grid-rows-1 p-[5rem] justify-center items-center">
-            <div className="place-self-center md:text-right">
-                <div className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter pb-6 lg:header lg:w-[50rem]">
-                    <motion.h1 className=" text-foreground">
-                        Hello, 
-                    </motion.h1>
-                    <p className=" text-primary-content">I'm Mohamed Sy a Software Developer</p>
-                </div>
-      
-                <button>Contact me</button>
+        <section className="md:flex p-[5rem] justify-center items-center gap-8">
+           
+            <div className="font-extrabold tracking-tighter pb-6 lg:header text-3xl md:text-4xl lg:text-5xl text-primary-content text-start ">
+                <motion.h1 className="">
+                    Hi, I'm Mohamed Sy
+                 </motion.h1>
+                <p className=" text-foreground">a Software Developer</p>
             </div>
 
-           <ProfileCard selfPhoto={selfPhoto} className=" place-self-center"/>
+            <ProfileCard selfPhoto={selfPhoto} />
+
         </section>
     )
 }

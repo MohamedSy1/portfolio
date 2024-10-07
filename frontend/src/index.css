@@ -4,12 +4,14 @@
 
 body {
   @apply bg-background text-copy;
+  letter-spacing: -0.05em;
   margin: 0;
   padding: 0;
   padding-bottom: 100px;
+  
 }
 
-.no-scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
