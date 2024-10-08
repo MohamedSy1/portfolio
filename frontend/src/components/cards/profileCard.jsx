@@ -9,7 +9,7 @@ const cardVariants = {
     onscreen: {
         y: 50,
         transition: {
-            type: "spring", 
+            type: "spring",
             bounce: 0.4,
             duration: 0.8,
         },
@@ -41,18 +41,7 @@ const ProfileCard = ({ selfPhoto }) => {
 
                 <div className="bg-gray-400 w-[300px] h-[120px] mt-4 rounded-md flex items-center justify-center">
                     <ul className="flex gap-3">
-                        <motion.li
-                        whileTap=""
-                        >
-                            <a href="https://github.com/MohamedSy1?tab=repositories">
-                                <FaSquareGithub className="bg-gray-400 w-[5rem] h-[5rem] p-5"/>
-                            </a>
-                        </motion.li>
-                        <motion.li>
-                            <a href="https://www.linkedin.com/in/mohamed-s-179b20230/">
-                                <IoLogoLinkedin className=" bg-gray-400 w-[5rem] h-[5rem] p-5"/>
-                            </a>
-                        </motion.li>
+                        <p>Contact me</p>
                     </ul>
                 </div>
             </div>
