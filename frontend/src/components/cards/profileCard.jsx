@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { IoLogoLinkedin } from "react-icons/io";
-import { FaSquareGithub } from "react-icons/fa6";
+import ResumeButton from "../buttons/downloadCV";
 
 const cardVariants = {
     offscreen: {
-        y: 300,
+        y: 150,
     },
     onscreen: {
         y: 50,
@@ -20,7 +19,6 @@ const ProfileCard = ({ selfPhoto }) => {
 
     return (
         <motion.div
-            className="card-container overflow-hidden flex items-center justify-center relative pt-5 -mb-[120px]"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
@@ -28,7 +26,7 @@ const ProfileCard = ({ selfPhoto }) => {
 
             <div className="flex flex-col items-center">
                 <motion.div
-                    className="card object-cover w-[300px] h-[430px] rounded-[20px] shadow-lg flex items-center justify-center z-0"
+                    className="w-[250px] h-[330px] md:w-[300px] md:h-[430px] rounded-[20px] shadow-lg"
                     variants={cardVariants}
                 >
                     <img
@@ -39,9 +37,13 @@ const ProfileCard = ({ selfPhoto }) => {
                     />
                 </motion.div>
 
-                <div className="bg-gray-400 w-[300px] h-[120px] mt-4 rounded-md flex items-center justify-center">
+                <div className="bg-gray-400 w-[250px] h-[120px] md:w-[300px] md:h-[120px] mt-4 rounded-md flex items-center justify-center">
                     <ul className="flex gap-3">
+<<<<<<< HEAD
                         <p>Contact me</p>
+=======
+                        <li> <ResumeButton/> </li>
+>>>>>>> 0c47c5ec150035ce66d6a7649455dd87a7dc7dc7
                     </ul>
                 </div>
             </div>
