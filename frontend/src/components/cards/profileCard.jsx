@@ -39,11 +39,7 @@ const ProfileCard = ({ selfPhoto }) => {
 
                 <div className="bg-gray-400 w-[250px] h-[120px] md:w-[300px] md:h-[120px] mt-4 rounded-md flex items-center justify-center">
                     <ul className="flex gap-3">
-<<<<<<< HEAD
-                        <p>Contact me</p>
-=======
-                        <li> <ResumeButton/> </li>
->>>>>>> 0c47c5ec150035ce66d6a7649455dd87a7dc7dc7
+                        <li> <ResumeButton /> </li>
                     </ul>
                 </div>
             </div>

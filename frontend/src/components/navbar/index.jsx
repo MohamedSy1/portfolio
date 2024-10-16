@@ -11,17 +11,10 @@ import { useEffect, useRef, useState } from "react";
 const numOfLines = 30;
 
 const navItems = [
-<<<<<<< HEAD
     { position: 1, title: "About" },
     { position: 8, title: "Projects" },
-    { position: 20, title: "Technologies" },
-    { position: 25, title: "Blogs" }
-=======
-    {position: 1, title: "About"},
-    {position: 8, title: "Projects"},
-    {position: 20, title: "Exp."},
-    {position: 25, title: "contact"}
->>>>>>> 0c47c5ec150035ce66d6a7649455dd87a7dc7dc7
+    { position: 20, title: "Exp." },
+    { position: 25, title: "contact" }
 ]
 
 const SideNavBar = () => {

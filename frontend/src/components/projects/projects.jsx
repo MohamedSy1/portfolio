@@ -17,11 +17,9 @@ const Projects = () => {
 
     return (
         <section>
-            <SectionHeader title={`Projects`}/>
+            <SectionHeader title={`Projects`} />
             <div>
-                    
             </div>
-
         </section>
     )
 }

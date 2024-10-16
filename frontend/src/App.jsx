@@ -12,11 +12,6 @@ function App() {
     <div className="grid grid-4-[54px_1fr]">
       <SideNavBar />
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Routes>
-          <Route path="/HireMe/About" element={<Header />}></Route>
-          <Route path="/HireMe/Projects" element={<Projects />}></Route>
-          <Route path="*" element={<Header />}></Route>
-        </Routes>
         <div className="mx-auto space-y-32 pb-24 pr-24">
           <Hero />
           <About />
