@@ -1,6 +1,7 @@
 import { getStaticProps } from "../../github";
 import { useState, useEffect } from "react";
 import SectionHeader from "../util/SectionHeader";
+import { Project } from "./project";
 
 const Projects = () => {
     const [pinnedRepo, setPinnedRepo] = useState([])
@@ -18,7 +19,10 @@ const Projects = () => {
     return (
         <section>
             <SectionHeader title={`Projects`} />
-            <div>
+            <div className="md:grid md:grid-cols-2">
+                {pinnedRepo.map((project) => {
+                    return <Project key={project.name} {...project}/>
+                })}
             </div>
         </section>
     )

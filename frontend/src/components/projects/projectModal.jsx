@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { MdClose } from "react-icons/md"
+import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 
 const ProjectModal = ({
-    modalContent,
-    projectLink,
+    url,
     setIsOpen,
     imgSrc,
     isOpen,
-    title,
-    code,
-    tech
+    description,
+    languages,
+    name
 }) => {
+
+    // console.log(languages.nodes.languageName)
 
     useEffect(() => {
         const body = document.querySelector('body');
@@ -40,16 +43,16 @@ const ProjectModal = ({
                 <img
                     className="w-full"
                     src={imgSrc}
-                    alt={`An image of the ${title} project.`}
+                    alt={`An image of the ${name} project.`}
                 />
                 <div className="p-8">
-                    <h4 className="text-3xl font-bold mb-2">{title}</h4>
+                    <h4 className="text-3xl font-bold mb-2">{name}</h4>
                     <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
-                        {tech.join(" - ")}
+                        {/* {languages.nodes.languageName?.join(" - ")} */}
                     </div>
 
                     <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">
-                        {modalContent}
+                        {description}
                     </div>
 
                     <div>
@@ -57,22 +60,14 @@ const ProjectModal = ({
                             Project Links<span className="text-indigo-500">.</span>
                         </p>
                         <div className="flex items-center gap-4 text-sm">
-                            <Link
+                            <a
                                 target="_blank"
                                 rel="nofollow"
                                 className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                                href={code}
+                                href={url}
                             >
                                 <AiFillGithub /> Source Code
-                            </Link>
-                            <Link
-                                target="_blank"
-                                rel="nofollow"
-                                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                                href={projectLink}
-                            >
-                                <AiOutlineExport /> Live Project
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
