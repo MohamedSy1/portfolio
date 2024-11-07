@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import ResumeButton from "../buttons/downloadCV";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { PiReadCvLogoFill } from "react-icons/pi";
+import { getStaticProps } from "../../github";
+import { useState, useEffect } from "react";
 
 const cardVariants = {
     offscreen: {
@@ -16,7 +20,20 @@ const cardVariants = {
 };
 
 const ProfileCard = ({ selfPhoto }) => {
+    const [data, setData] = useState()
 
+    useEffect(() => {
+        const doFetch = async () => {
+            const data = (await getStaticProps()).props.pinnedItems;
+            setData(data)
+        }
+
+        doFetch();
+    }, [])
+
+    console.log(data)
+
+    // console.log(`data for profile card: ${data}`)
     return (
         <motion.div
             initial="offscreen"
@@ -38,8 +55,10 @@ const ProfileCard = ({ selfPhoto }) => {
                 </motion.div>
 
                 <div className="bg-gray-400 w-[250px] h-[120px] md:w-[300px] md:h-[120px] mt-4 rounded-md flex items-center justify-center">
-                    <ul className="flex gap-3">
-                        <li> <ResumeButton /> </li>
+                    <ul className="flex gap-3 ">
+                        <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><a href=""></a><PiReadCvLogoFill /> </li>
+                        <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><AiFillGithub /> </li>
+                        <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><AiFillLinkedin /> </li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import { useAnimation, useInView, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
-import ProjectModal from "./projectModal";
 
 export const Project = ({
   url,
@@ -10,9 +9,6 @@ export const Project = ({
   name,
   languages,
 }) => {
-  const [hovered, setHovered] = useState(false);
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const controls = useAnimation();
 
@@ -38,62 +34,15 @@ export const Project = ({
         initial="hidden"
         animate={controls}
         transition={{ duration: 0.75 }}
-        className="w-[20rem] justify-center pb-32"
+        className="w-[20rem] mx-auto justify-center pb-32 p-5"
       >
-        <div
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
-          className="md:w-[30rem] bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden aspect-square"
-        >
-          <img
-            src={imgSrc}
-            alt={`An image of the ${name} project.`}
-            style={{
-              width: hovered ? "90%" : "85%",
-              rotate: hovered ? "2deg" : "0deg",
-            }}
-            className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
-          />
+        <div className="bg-slate">
+          <h1 className=" font-bold pb-5">{name}</h1>
+          <p className=" pb-4">{description}</p>
+          <a href={url}>{<AiFillGithub />}</a>
         </div>
-        <div className="mt-6">
-          
-            <div className="flex items-center gap-2 w-full">
-              <h4 className="font-bold text-lg shrink-0 max-w-[calc(100%_-_150px)]">
-                {name}
-              </h4>
-              <div className="w-full h-[1px] bg-zinc-600" />
-              <a href={url}>
-                <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-                </a>
-            </div>
-        
-    
-            <div className="flex flex-wrap gap-4 text-sm text-indigo-300 my-2">
-              {/* {languages.node.languageName?.join(" - ")} */}
-            </div>
- 
-      
-            <p className="text-zinc-300 leading-relaxed">
-              {description}{" "}
-              <span
-                className="inline-block text-sm text-indigo-300 cursor-pointer"
-                onClick={() => setIsOpen(true)}
-              >
-                Learn more {">"}
-              </span>
-            </p>
-    
-        </div>
+
       </motion.div>
-      <ProjectModal
-        url={url}
-        setIsOpen={setIsOpen}
-        isOpen={isOpen}
-        imgSrc={imgSrc}
-        name={name}
-        // languages={languages.nodes.languageName}
-      />
     </>
   );
 }
