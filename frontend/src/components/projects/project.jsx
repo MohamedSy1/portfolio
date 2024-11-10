@@ -34,12 +34,12 @@ export const Project = ({
         initial="hidden"
         animate={controls}
         transition={{ duration: 0.75 }}
-        className="w-[20rem] mx-auto justify-center pb-32 p-5"
+        className="w-[20rem] mx-auto justify-center mb-10 p-5 border gap-7"
       >
         <div className="bg-slate">
           <h1 className=" font-bold pb-5">{name}</h1>
           <p className=" pb-4">{description}</p>
-          <a href={url}>{<AiFillGithub />}</a>
+          <a href={url} className="w-fit"><AiFillGithub /></a>
         </div>
 
       </motion.div>

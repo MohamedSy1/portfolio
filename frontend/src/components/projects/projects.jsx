@@ -8,19 +8,20 @@ const Projects = () => {
 
     useEffect(() => {
         const doFetch = async () => {
-            const pinnedRepository = (await getStaticProps()).props.pinnedItems;
-            setPinnedRepo(pinnedRepository)
+            const response = await getStaticProps()
+
+            setPinnedRepo(response.props.pinnedItems)
         }
         doFetch()
     }, [])
 
-    // console.log(pinnedRepo)
+    console.log(pinnedRepo)
 
     return (
         <section>
             <SectionHeader title={`Projects`} />
             <div className="md:grid md:grid-cols-2">
-                {pinnedRepo.map((project) => {
+                {pinnedRepo?.map((project) => {
                     return <Project key={project.name} {...project} />
                 })}
             </div>

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Projects from "./components/projects/projects";
 import React, { lazy, Suspense } from "react";
 import About from "./components/about/about";
+import ExperienceContainer from "./components/Experience/experienceContainer";
 
 const Hero = lazy(() => import("./components/hero/hero"))
 
@@ -16,6 +17,7 @@ function App() {
           <Hero />
           <About />
           <Projects />
+          <ExperienceContainer />
           {/* <Routes>
             <Route path="/" element={<Header/>}></Route>
             <Route path="/HireMe/Projects" element={<Projects />}></Route>
