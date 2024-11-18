@@ -31,8 +31,6 @@ const ProfileCard = ({ selfPhoto }) => {
         doFetch();
     }, [])
 
-    console.log(data)
-
     // console.log(`data for profile card: ${data}`)
     return (
         <motion.div
@@ -48,16 +46,15 @@ const ProfileCard = ({ selfPhoto }) => {
                     variants={cardVariants}
                 >
                     <img
-                        loading="lazy"
                         src={selfPhoto}
                         alt="profile picture of mohamed"
-                        className="w-full h-full object-cover rounded-[20px]"
+                        className="w-full h-full rounded-[20px]"
                     />
                 </motion.div>
 
                 <div className="bg-gray-400 min-w-[250px] h-[120px] mt-4 rounded-md flex items-center justify-center">
                     <ul className="flex gap-3 ">
-                        <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><a href=""><PiReadCvLogoFill/></a> </li>
+                        <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><a href="https://docs.google.com/document/d/1prgfoGLyiM6Obswvt__QhxA2oeCGKhI3bZIqyNwATTk/edit?tab=t.0"><PiReadCvLogoFill /></a> </li>
                         <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><a href="https://github.com/MohamedSy1"><AiFillGithub /></a> </li>
                         <li className="tracking-tighter text-neutral-500 transition-colors hover:text-indigo-300"><a href="https://www.linkedin.com/in/mohamed-s-179b20230/"><AiFillLinkedin /></a> </li>
                     </ul>
