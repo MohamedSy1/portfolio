@@ -33,7 +33,7 @@ const experience = [
 
 const ExperienceContainer = () => {
     return (
-        <section>
+        <section id="Exp">
             <SectionHeader title={'Experience'} dir="l"/>
             {experience.map((item, index) => (
                 <ExperienceItems key={item.title} {...item}/>

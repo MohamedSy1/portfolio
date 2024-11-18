@@ -14,16 +14,11 @@ function App() {
       <SideNavBar />
       <Suspense fallback={<h1>Loading...</h1>}>
         <div className="mx-auto space-y-32 pb-24 pr-24">
-          <Hero />
-          <About />
+          <Hero id="hero"/>
+          <About  />
           <Projects />
-          <ExperienceContainer />
-          {/* <Routes>
-            <Route path="/" element={<Header/>}></Route>
-            <Route path="/HireMe/Projects" element={<Projects />}></Route>
-            <Route path="/HireMe/About" element={<About />}></Route>
-            <Route path="*" element={<Header />}></Route>
-        </Routes> */}
+          <ExperienceContainer/>
+     
         </div>
       </Suspense>
     </div>

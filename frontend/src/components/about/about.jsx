@@ -5,7 +5,7 @@ import Stats from "./stats";
 const About = () => {
 
     return (
-        <section>
+        <section id="About">
             <SectionHeader title={`About`} dir="l"/>
             <div className=" grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8 max-w-7xl">
                 <div className=" space-y-4">
